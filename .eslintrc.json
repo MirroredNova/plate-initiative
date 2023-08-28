@@ -10,6 +10,7 @@
   },
   "plugins": ["@typescript-eslint", "prettier", "react"],
   "extends": [
+    "airbnb-base",
     "airbnb-typescript/base",
     "eslint:recommended",
     "next/core-web-vitals",
@@ -29,6 +30,12 @@
         "peerDependencies": false
       }
     ],
-    "max-len": ["error", { "code": 140 }]
+    "max-len": ["error", { "code": 140 }],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
   }
 }

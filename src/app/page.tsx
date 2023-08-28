@@ -1,9 +1,9 @@
 import React from "react";
 
 const Home = () => (
-  <main className="flex min-h-screen flex-col items-center font-alice">
+  <section className="flex min-h-screen flex-col items-center font-alice z-20 top-0 left-0">
     Main Page
-  </main>
+  </section>
 );
 
 export default Home;

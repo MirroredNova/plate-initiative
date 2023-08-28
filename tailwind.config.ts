@@ -13,12 +13,12 @@ const config: Config = {
     },
     extend: {
       colors: {
-        'primary': 'var(--primary)',
-        'secondary-dark': 'var(--secondary-dark)',
-        'secondary-mid': 'var(--secondary-mid)',
-        'secondary-light': 'var(--secondary-light)',
-        'accent-primary-hover': 'var(--accent-primary-hover)',
-        'accent-secondary': 'var(--accent-secondary)',
+        primary: "var(--primary)",
+        secondary_dark: "var(--secondary-dark)",
+        secondary_mid: "var(--secondary-mid)",
+        secondary_light: "var(--secondary-light)",
+        accent_primary: "var(--accent-primary)",
+        accent_secondary: "var(--accent-secondary)",
       },
     },
   },
