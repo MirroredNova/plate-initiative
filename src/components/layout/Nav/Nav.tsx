@@ -16,27 +16,44 @@ const Nav = () => {
   const [navOpened, setNavOpened] = React.useState(false);
 
   return (
-    <nav className="font-sofia bg-white">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-7 px-12">
-        <div className="flex items-center text-accent_primary text-4xl font-bold">
+    <nav className="font-sofia bg-white fixed lg:static w-full">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-2 px-3 lg:py-7 lg:px-12">
+        <div className="flex items-center text-accent_primary text-3xl sm:text-4xl font-bold p-2">
           <Link href="/">The Plate Initiative</Link>
         </div>
-        <div className="text-accent_primary lg:hidden flex">
+        <div className="text-accent_primary lg:hidden flex p-2">
           <button onClick={() => setNavOpened((prev) => !prev)}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-7 h-7"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 4.5v15m7.5-7.5h-15"
-              />
-            </svg>
+            {navOpened ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 4.5v15m7.5-7.5h-15"
+                />
+              </svg>
+            )}
           </button>
         </div>
         <div className="lg:flex flex-wrap items-center justify-between hidden">
@@ -58,7 +75,26 @@ const Nav = () => {
           </Link>
         </div>
       </div>
-      {navOpened && <div>Nav Opened</div>}
+      {navOpened && (
+        <div className="font-sofia font-bold text-4xl lg:hidden bg-white fixed overflow-hidden w-full px-5 pb-7">
+          <ul className="text-secondary_mid">
+            {navItems.map((item) => (
+              <li
+                className="mr-4 hover:text-secondary_mid transition ease-in-out duration-200 py-1"
+                key={item.name}
+              >
+                <Link href={item.path}>{item.name}</Link>
+              </li>
+            ))}
+          </ul>
+          <Link
+            className="text-accent_primary mt-4 block"
+            href="https://www.flipcause.com/secure/cause_pdetails/MTQ1MzAz"
+          >
+            Donate
+          </Link>
+        </div>
+      )}
     </nav>
   );
 };

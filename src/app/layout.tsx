@@ -23,7 +23,9 @@ type Props = {
 const RootLayout = ({ children }: Props) => (
   <html lang="en" className={`${alice.variable} ${sofia.variable}`}>
     <body className="bg-primary">
-      <Nav />
+      <header>
+        <Nav />
+      </header>
       <main>{children}</main>
     </body>
   </html>
