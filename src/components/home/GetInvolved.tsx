@@ -3,8 +3,8 @@ import GetInvolvedLinks from "./GetInvolvedLinks";
 
 const GetInvolved = () => (
   <section className="flex justify-center">
-    <div className="my-auto flex px-12 py-20 max-w-6xl gap-4 flex-col">
-      <div className="flex text-secondary_dark p-4 gap-24">
+    <div className="h-fit my-auto flex px-3 sm:px-12 py-20 max-w-6xl gap-4 flex-col">
+      <div className="flex flex-col md:flex-row text-secondary_dark p-2 sm:p-4 gap-4 md:gap-24">
         <h2 className="font-sofia text-4xl font-bold whitespace-nowrap">
           Get Involved
         </h2>
@@ -20,7 +20,7 @@ const GetInvolved = () => (
           create a stronger, more inclusive culinary community for everyone.
         </p>
       </div>
-      <div className="flex flex-row">
+      <div className="flex flex-col gap-8 sm:gap-0 sm:flex-row">
         <GetInvolvedLinks
           header="Sign Up For a Program"
           text={`As we continue to work on rolling out our programs, 
