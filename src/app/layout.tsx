@@ -2,6 +2,7 @@ import Nav from "@/components/layout/Nav/Nav";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Alice, Sofia_Sans } from "next/font/google";
+import Footer from "@/components/layout/Footer/Footer";
 
 const alice = Alice({
   subsets: ["latin"],
@@ -22,11 +23,12 @@ type Props = {
 
 const RootLayout = ({ children }: Props) => (
   <html lang="en" className={`${alice.variable} ${sofia.variable}`}>
-    <body className="bg-primary">
+    <body className="bg-primary_light min-w-[325px]">
       <header>
         <Nav />
       </header>
       <main>{children}</main>
+      <Footer />
     </body>
   </html>
 );

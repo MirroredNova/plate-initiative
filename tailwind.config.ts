@@ -13,7 +13,8 @@ const config: Config = {
     },
     extend: {
       colors: {
-        primary: "var(--primary)",
+        primary_light: "var(--primary-light)",
+        primary_dark: "var(--primary-dark)",
         secondary_dark: "var(--secondary-dark)",
         secondary_mid: "var(--secondary-mid)",
         secondary_light: "var(--secondary-light)",

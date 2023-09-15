@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 
 const Introduction = () => (
-  <section className="flex justify-center pt-16 lg:mt-0">
+  <section className="flex justify-center pt-16 lg:pt-0 lg:mt-0">
     <div className="flex flex-col lg:flex-row px-3 sm:px-12 py-20 max-w-5xl gap-4">
       <div className="flex flex-col p-2 lg:p-4">
         <h3 className="text-accent_primary text-base font-extrabold font-sofia tracking-wide">
