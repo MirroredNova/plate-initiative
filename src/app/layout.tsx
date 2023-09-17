@@ -1,8 +1,8 @@
-import Nav from "@/components/layout/Nav/Nav";
+import Nav from "@/components/layout/Nav";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Alice, Sofia_Sans } from "next/font/google";
-import Footer from "@/components/layout/Footer/Footer";
+import Footer from "@/components/layout/Footer";
 
 const alice = Alice({
   subsets: ["latin"],

@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => (
   <footer className="bg-primary_dark text-primary_light">
-    <div className="px-5 sm:px-12 py-10 sm:py-24 flex gap-4 flex-col sm:flex-row place-content-between text-lg">
+    <div className="px-5 sm:px-12 py-10 sm:py-24 flex gap-4 flex-col sm:flex-row place-content-between text-lg max-w-6xl m-auto">
       <div className="font-alice font-extrabold mb-28 sm:mb-0">
         <h3 className="mb-4 font-bold font-sofia">
           <Link
