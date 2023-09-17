@@ -2,9 +2,11 @@ import React from "react";
 
 const Description = () => (
   <section className="flex justify-center">
-    <div className="h-fit my-auto flex px-3 sm:px-12 py-20 max-w-3xl flex-col font-alice text-lg">
+    <div className="h-fit my-auto flex px-3 sm:px-12 py-20 max-w-3xl flex-col font-alice text-lg gap-8">
       <div>
-        <h2>Our Mission</h2>
+        <h2 className="font-sofia text-3xl sm:text-5xl text-secondary_dark font-bold mb-6">
+          Our Mission
+        </h2>
         <p>
           At the heart of our initiative lies a steadfast mission: to transform
           the lives of underserved youths through the art and science of
@@ -21,7 +23,9 @@ const Description = () => (
         </p>
       </div>
       <div>
-        <h2>Philosophy and Vision</h2>
+        <h2 className="font-sofia text-3xl sm:text-5xl text-secondary_dark font-bold mb-6">
+          Philosophy and Vision
+        </h2>
         <p>
           The Plate Initiative is firmly grounded in innovation, mentorship,
           community, and sustainability. We aim to build upon these core values

@@ -1,10 +1,19 @@
 import Description from "@/components/plate/Description";
-import SpaceImage from "@/components/shared/SpaceImage";
+import ParallaxImage from "@/components/shared/ParallaxImage";
 import React from "react";
+import Image from "next/image";
 
 const Page = () => (
   <>
-    <SpaceImage src={"/plate-bg.jpeg"} />
+    <ParallaxImage>
+      <Image
+        src={"/plate-bg.jpeg"}
+        alt="fill murray"
+        width={2500}
+        height={1875}
+        className="h-full w-full object-cover"
+      />
+    </ParallaxImage>
     <Description />
   </>
 );

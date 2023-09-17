@@ -17,7 +17,7 @@ const Nav = () => {
 
   return (
     <nav className="font-sofia bg-white fixed lg:static w-full z-50">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-2 px-3 lg:py-7 lg:px-12">
+      <div className="max-w-6xl flex flex-wrap items-center justify-between mx-auto py-2 px-3 lg:py-7 sm:px-12">
         <div className="flex items-center text-accent_primary text-3xl sm:text-4xl font-bold p-2">
           <Link href="/">The Plate Initiative</Link>
         </div>
