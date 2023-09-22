@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 
 const Programs = () => (
-  <section className="flex justify-center h-screen bg-accent_primary">
+  <section className="flex justify-center bg-accent_primary">
     <div className="h-fit my-auto flex px-3 sm:px-12 py-20 max-w-6xl gap-4 flex-col">
       <div className="flex flex-col md:flex-row text-primary_light p-2 sm:p-4 gap-4 md:gap-24">
         <h2 className="font-sofia text-4xl font-bold whitespace-nowrap">

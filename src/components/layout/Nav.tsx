@@ -1,5 +1,6 @@
 "use client";
 
+import useClickOutside from "@/hooks/useClickOutside";
 import Link from "next/link";
 import React from "react";
 
@@ -14,9 +15,16 @@ const navItems = [
 
 const Nav = () => {
   const [navOpened, setNavOpened] = React.useState(false);
+  const wrapperRef = React.useRef<HTMLDivElement>(null);
+  useClickOutside(wrapperRef, () => {
+    setNavOpened(false);
+  });
 
   return (
-    <nav className="font-sofia bg-white fixed lg:static w-full z-50">
+    <nav
+      className="font-sofia bg-white fixed lg:static w-full z-50"
+      ref={wrapperRef}
+    >
       <div className="max-w-6xl flex flex-wrap items-center justify-between mx-auto py-2 px-3 lg:py-7 sm:px-12">
         <div className="flex items-center text-accent_primary text-3xl sm:text-4xl font-bold p-2">
           <Link href="/">The Plate Initiative</Link>
@@ -63,13 +71,16 @@ const Nav = () => {
                 className="mr-4 hover:text-secondary_mid transition ease-in-out duration-200"
                 key={item.name}
               >
-                <Link href={item.path}>{item.name}</Link>
+                <Link href={item.path} onClick={() => setNavOpened(false)}>
+                  {item.name}
+                </Link>
               </li>
             ))}
           </ul>
           <Link
             href="https://www.flipcause.com/secure/cause_pdetails/MTQ1MzAz"
             className="text-accent_primary border-2 border-accent_primary rounded-full px-5 py-2 ml-2"
+            target="_blank"
           >
             Donate
           </Link>
@@ -83,13 +94,16 @@ const Nav = () => {
                 className="mr-4 hover:text-secondary_mid transition ease-in-out duration-200 py-1"
                 key={item.name}
               >
-                <Link href={item.path}>{item.name}</Link>
+                <Link href={item.path} onClick={() => setNavOpened(false)}>
+                  {item.name}
+                </Link>
               </li>
             ))}
           </ul>
           <Link
             className="text-accent_primary mt-4 block"
             href="https://www.flipcause.com/secure/cause_pdetails/MTQ1MzAz"
+            target="_blank"
           >
             Donate
           </Link>

@@ -1,8 +1,9 @@
 import React from "react";
 import TextImage from "../shared/TextImage";
+import BodySection from "../shared/BodySection";
 
 const Quote = () => (
-  <section className="flex justify-center">
+  <BodySection>
     <TextImage right={false} src={"/mission-card.jpeg"}>
       <div className="bg-white px-2 py-8 sm:px-14 sm:py-14 grid gap-4">
         <p className="text-secondary_dark font-alice text-lg">
@@ -16,7 +17,7 @@ const Quote = () => (
         </p>
       </div>
     </TextImage>
-  </section>
+  </BodySection>
 );
 
 export default Quote;

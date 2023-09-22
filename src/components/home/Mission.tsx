@@ -1,10 +1,11 @@
 import Link from "next/link";
 import React from "react";
 import TextImage from "../shared/TextImage";
+import BodySection from "../shared/BodySection";
 
 // ml-auto, left-12
 const Mission = () => (
-  <section className="flex justify-center">
+  <BodySection>
     <TextImage
       right={true}
       src={
@@ -30,7 +31,7 @@ const Mission = () => (
         </Link>
       </div>
     </TextImage>
-  </section>
+  </BodySection>
 );
 
 export default Mission;

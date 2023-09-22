@@ -1,11 +1,11 @@
 import React from "react";
+import BigHeader from "../shared/BigHeader";
+import BodySection from "../shared/BodySection";
 
 const ProgramsList = () => (
-  <section className="flex justify-center">
+  <BodySection>
     <div className="max-w-4xl px-3 sm:px-12 pt-20 pb-36 font-alice text-lg flex flex-col gap-20">
-      <h2 className="font-sofia text-3xl sm:text-5xl text-secondary_dark font-bold mb-6">
-        Our Programs
-      </h2>
+      <BigHeader>Our Programs</BigHeader>
       <div>
         <h3 className="font-sofia font-extrabold text-accent_primary my-3.5">
           <i>THE FIRST PLATE</i>
@@ -58,7 +58,7 @@ const ProgramsList = () => (
         </p>
       </div>
     </div>
-  </section>
+  </BodySection>
 );
 
 export default ProgramsList;

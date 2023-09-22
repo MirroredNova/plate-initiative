@@ -9,7 +9,7 @@ type Props = {
 
 const ParallaxImage = ({ children }: Props) => (
   <section>
-    <Parallax strength={800} className="h-screen">
+    <Parallax strength={400} className="h-screen">
       <Background className="w-screen h-screen">{children}</Background>
     </Parallax>
   </section>

@@ -1,5 +1,12 @@
 import React from "react";
+import Description from "@/components/contact/Description";
+import ContactForm from "@/components/contact/ContactForm";
 
-const Page = () => <div>Contact Page</div>;
+const Page = () => (
+  <>
+    <Description />
+    <ContactForm />
+  </>
+);
 
 export default Page;

@@ -1,4 +1,5 @@
 import React from "react";
+import BodySection from "../shared/BodySection";
 
 type Props = {
   text: string;
@@ -6,7 +7,7 @@ type Props = {
 };
 
 const Quote = ({ text, by }: Props) => (
-  <section className="flex justify-center">
+  <BodySection>
     <div className="flex px-12 py-44 max-w-5xl gap-4 flex-col text-center font-sofia">
       <h2 className="font-extrabold text-secondary_dark text-3xl lg:text-4xl/[48px] px-4 py-2 italic">
         {`"${text}"`}
@@ -15,7 +16,7 @@ const Quote = ({ text, by }: Props) => (
         {by}
       </p>
     </div>
-  </section>
+  </BodySection>
 );
 
 export default Quote;

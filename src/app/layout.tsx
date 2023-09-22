@@ -27,7 +27,7 @@ const RootLayout = ({ children }: Props) => (
       <header>
         <Nav />
       </header>
-      <main>{children}</main>
+      <main className="pt-16 lg:pt-0">{children}</main>
       <Footer />
     </body>
   </html>

@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import BodySection from "../shared/BodySection";
 
 const CoverImage = () => (
-  <section className="flex justify-center">
+  <BodySection>
     <div className="max-w-6xl px-3 sm:px-12 pt-20">
       <Image
         src={"/program-bg.jpg"}
@@ -11,7 +12,7 @@ const CoverImage = () => (
         height={1875}
       />
     </div>
-  </section>
+  </BodySection>
 );
 
 export default CoverImage;

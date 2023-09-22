@@ -1,9 +1,11 @@
 import React from "react";
+import BigHeader from "../shared/BigHeader";
+import BodySection from "../shared/BodySection";
 
 const Description = () => (
-  <section>
-    <div>
-      <h2>Volunteer</h2>
+  <BodySection>
+    <div className="h-fit my-auto flex px-3 sm:px-12 pt-20 pb-8 max-w-3xl flex-col font-alice text-lg">
+      <BigHeader>Volunteer</BigHeader>
       <p>
         Become a volunteer with The Plate Initiative. As a volunteer, you become
         an essential part of our mission, contributing your skills and passion
@@ -15,7 +17,7 @@ const Description = () => (
         stronger, more inclusive culinary community.
       </p>
     </div>
-  </section>
+  </BodySection>
 );
 
 export default Description;

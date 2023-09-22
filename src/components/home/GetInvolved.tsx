@@ -1,8 +1,9 @@
 import React from "react";
 import GetInvolvedLinks from "./GetInvolvedLinks";
+import BodySection from "../shared/BodySection";
 
 const GetInvolved = () => (
-  <section className="flex justify-center">
+  <BodySection>
     <div className="h-fit my-auto flex px-3 sm:px-12 py-20 max-w-6xl gap-4 flex-col">
       <div className="flex flex-col md:flex-row text-secondary_dark p-2 sm:p-4 gap-4 md:gap-24">
         <h2 className="font-sofia text-4xl font-bold whitespace-nowrap">
@@ -44,7 +45,7 @@ const GetInvolved = () => (
         />
       </div>
     </div>
-  </section>
+  </BodySection>
 );
 
 export default GetInvolved;

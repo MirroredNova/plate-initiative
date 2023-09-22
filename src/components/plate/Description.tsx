@@ -1,11 +1,11 @@
 import React from "react";
+import BigHeader from "../shared/BigHeader";
+import BodySection from "../shared/BodySection";
 
 const Description = () => (
-  <section className="flex justify-center">
+  <BodySection>
     <div className="h-fit my-auto flex px-3 sm:px-12 py-20 max-w-3xl flex-col font-alice text-lg">
-      <h2 className="font-sofia text-3xl sm:text-5xl text-secondary_dark font-bold mb-6">
-        P.L.A.T.E Initiative
-      </h2>
+      <BigHeader>P.L.A.T.E Initiative</BigHeader>
       <div>
         <h3 className="font-sofia font-extrabold text-accent_primary my-3.5">
           PLAN
@@ -90,7 +90,7 @@ const Description = () => (
         </p>
       </div>
     </div>
-  </section>
+  </BodySection>
 );
 
 export default Description;
