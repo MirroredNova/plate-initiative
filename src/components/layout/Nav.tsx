@@ -1,17 +1,9 @@
 "use client";
 
+import { navItems } from "@/constants/constants";
 import useClickOutside from "@/hooks/useClickOutside";
 import Link from "next/link";
 import React from "react";
-
-const navItems = [
-  { name: "Home", path: "/" },
-  { name: "Mission", path: "/mission" },
-  { name: "PLATE", path: "/plate" },
-  { name: "Programs", path: "/programs" },
-  { name: "Volunteer", path: "/volunteer" },
-  { name: "Contact", path: "/contact" },
-];
 
 const Nav = () => {
   const [navOpened, setNavOpened] = React.useState(false);
@@ -65,7 +57,7 @@ const Nav = () => {
           </button>
         </div>
         <div className="lg:flex flex-wrap items-center justify-between hidden">
-          <ul className="flex flex-wrap text-secondary_mid hover:text-secondary_light transition ease-in-out duration-200">
+          <ul className="flex flex-wrap text-secondary_mid hover:text-secondary_light transition-all ease-in-out duration-200">
             {navItems.map((item) => (
               <li
                 className="mr-4 hover:text-secondary_mid transition ease-in-out duration-200"
@@ -79,7 +71,8 @@ const Nav = () => {
           </ul>
           <Link
             href="https://www.flipcause.com/secure/cause_pdetails/MTQ1MzAz"
-            className="text-accent_primary border-2 border-accent_primary rounded-full px-5 py-2 ml-2"
+            className="text-accent_primary border-2 border-accent_primary rounded-full px-5 py-2 ml-2 
+            hover:bg-accent_primary hover:text-white transition-all duration-300 ease-in-out"
             target="_blank"
           >
             Donate
@@ -101,7 +94,7 @@ const Nav = () => {
             ))}
           </ul>
           <Link
-            className="text-accent_primary mt-4 block"
+            className="text-accent_primary mt-4 block transition-all duration-300 ease-in-out"
             href="https://www.flipcause.com/secure/cause_pdetails/MTQ1MzAz"
             target="_blank"
           >

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import FooterSignupForm from "./FooterSignupForm";
 
 const Footer = () => (
   <footer className="bg-primary_dark text-primary_light">
@@ -28,7 +29,7 @@ const Footer = () => (
         <p>
           <Link
             className="underline decoration-secondary_mid underline-offset-4 hover:text-secondary_mid hover:transition-all"
-            href="/missions"
+            href="/mission"
           >
             Mission
           </Link>
@@ -69,17 +70,7 @@ const Footer = () => (
           </Link>
         </p>
       </div>
-      <div className="font-alice flex flex-col items-start gap-6 text-base place-content-between">
-        <p>Sign up to receive news and updates</p>
-        <input
-          type="text"
-          placeholder="Email Address"
-          className="p-3.5 focus:outline-none text-secondary_dark min-w-0 w-full max-w-[250px]"
-        />
-        <button className="block px-8 py-2 rounded-full border-2 hover:bg-white hover:text-primary_dark hover:transition-all">
-          SIGN UP
-        </button>
-      </div>
+      <FooterSignupForm />
     </div>
   </footer>
 );

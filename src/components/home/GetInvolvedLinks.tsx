@@ -17,7 +17,8 @@ const GetInvolvedLinks = ({ header, text, buttonText, buttonLink }: Props) => (
     <Link
       href={buttonLink}
       className="bg-accent_primary text-accent_secondary rounded-full 
-        font-sofia py-4 px-6 sm:py-6 sm:px-9 box-content block w-fit font-extrabold mx-auto text-base sm:text-lg"
+        font-sofia py-4 px-6 sm:py-6 sm:px-9 box-content block w-fit font-extrabold mx-auto text-base sm:text-lg 
+        hover:opacity-70 transition-all duration-300 ease-in-out"
     >
       {buttonText}
     </Link>

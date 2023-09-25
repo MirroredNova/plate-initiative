@@ -19,8 +19,14 @@ const Introduction = () => (
         </p>
       </div>
       <div className="my-auto p-2 lg:p-4">
-        <div className="text-accent_secondary bg-accent_primary rounded-full px-12 py-5 font-semibold w-fit whitespace-nowrap">
-          <Link href="/plate">Learn More</Link>
+        <div>
+          <Link
+            href="/plate"
+            className="text-accent_secondary bg-accent_primary rounded-full px-12 py-5 font-semibold w-fit whitespace-nowrap 
+            hover:opacity-80 transition-all duration-300 ease-in-out"
+          >
+            Learn More
+          </Link>
         </div>
       </div>
     </div>

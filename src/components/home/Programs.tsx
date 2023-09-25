@@ -27,7 +27,8 @@ const Programs = () => (
       <div className="p-4 text-center">
         <Link
           href="/programs"
-          className="bg-primary_light rounded-full text-accent_primary font-sofia px-8 py-5 font-extrabold"
+          className="bg-primary_light rounded-full text-accent_primary font-sofia px-8 py-5 font-extrabold
+          hover:opacity-80 transition-all duration-300 ease-in-out"
         >
           Learn more
         </Link>
