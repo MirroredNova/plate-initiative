@@ -12,7 +12,10 @@ const alice = Alice({
 const sofia = Sofia_Sans({ subsets: ["latin"], variable: "--font-sofia" });
 
 export const metadata: Metadata = {
-  title: "The Plate Initiative",
+  title: {
+    template: "%s | The Plate Initiative",
+    default: "The Plate Initiative",
+  },
   description: `The Plate Initiative is a non-profit organization that aims to equip underserved youths with the tools to become innovators
   in the field of culinary arts by empowering them to explore opportunities and acquire essential life skills.`,
 };

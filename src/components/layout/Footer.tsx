@@ -65,6 +65,7 @@ const Footer = () => (
           <Link
             className="underline decoration-secondary_mid underline-offset-4 hover:text-secondary_mid hover:transition-all"
             href="https://www.flipcause.com/secure/cause_pdetails/MTQ1MzAz"
+            target="_blank"
           >
             Donate
           </Link>

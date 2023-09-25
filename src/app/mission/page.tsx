@@ -3,6 +3,13 @@ import Quote from "@/components/mission/Quote";
 import ParallaxImage from "@/components/shared/ParallaxImage";
 import React from "react";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Mission",
+  description: `The Plate Initiative is a non-profit organization that aims to equip underserved youths with the tools to become innovators
+  in the field of culinary arts by empowering them to explore opportunities and acquire essential life skills.`,
+};
 
 const Page = () => (
   <>
