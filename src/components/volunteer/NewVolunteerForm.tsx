@@ -216,7 +216,8 @@ const NewVolunteerForm = () => {
         </div>
         <button
           type="submit"
-          className="text-accent_primary border-2 border-accent_primary rounded-full px-5 py-2 font-sofia font-bold"
+          className="text-accent_primary border-2 border-accent_primary rounded-full px-5 py-2 font-sofia font-bold
+          hover:bg-accent_primary hover:text-white transition-all duration-300 ease-in-out"
         >
           Submit
         </button>

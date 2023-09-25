@@ -25,7 +25,8 @@ const Mission = () => (
         </p>
         <Link
           href="/mission"
-          className="text-secondary_mid font-alice text-lg underline decoration-secondary_mid underline-offset-4 font-bold"
+          className="text-secondary_mid font-alice text-lg underline decoration-secondary_mid underline-offset-4 font-bold 
+          hover:text-secondary_light transition-all duration-300 ease-in-out"
         >
           Learn More
         </Link>
