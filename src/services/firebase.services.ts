@@ -5,18 +5,13 @@ import {
 import app from "@/modules/firebase";
 import { getDatabase, push, ref } from "firebase/database";
 
-export const sendNewsletterSignup = async (email: string) => {
+export const sendNewsletterSignup = (email: string) => {
   const db = getDatabase(app);
   const emailRef = ref(db, "newsletter-emails");
-  try {
-    await push(emailRef, {
-      email,
-      date: new Date().toISOString(),
-    });
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  } catch (error: any) {
-    throw new Error(error);
-  }
+  push(emailRef, {
+    email,
+    date: new Date().toISOString(),
+  });
 };
 
 export const sendContactForm = (formData: ContactFormInterface) => {

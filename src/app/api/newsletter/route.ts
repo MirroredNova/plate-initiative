@@ -10,6 +10,6 @@ export async function POST(req: Request) {
   if (!body.email || !validateEmail(body.email)) {
     return new Response(null, { status: 400 });
   }
-  await sendNewsletterSignup(body.email);
+  sendNewsletterSignup(body.email);
   return new Response(null, { status: 200 });
 }
