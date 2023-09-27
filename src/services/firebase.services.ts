@@ -13,9 +13,9 @@ export const sendNewsletterSignup = async (email: string) => {
       email,
       date: new Date().toISOString(),
     });
-    console.log("Data sent successfully to Firebase");
-  } catch (error) {
-    console.error("Error sending data to Firebase:", error);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } catch (error: any) {
+    throw new Error(error);
   }
 };
 
