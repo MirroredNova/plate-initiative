@@ -5,13 +5,18 @@ import {
 import app from "@/modules/firebase";
 import { getDatabase, push, ref } from "firebase/database";
 
-export const sendNewsletterSignup = (email: string) => {
+export const sendNewsletterSignup = async (email: string) => {
   const db = getDatabase(app);
   const emailRef = ref(db, "newsletter-emails");
-  push(emailRef, {
-    email,
-    date: new Date().toISOString(),
-  });
+  try {
+    await push(emailRef, {
+      email,
+      date: new Date().toISOString(),
+    });
+    console.log("Data sent successfully to Firebase");
+  } catch (error) {
+    console.error("Error sending data to Firebase:", error);
+  }
 };
 
 export const sendContactForm = (formData: ContactFormInterface) => {
