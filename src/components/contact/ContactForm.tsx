@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { sendContactForm } from "@/services/firebase.services";
 import { ContactFormInterface } from "@/interfaces/interfaces";
 import { validateEmail } from "@/services/util.services";
 import BodySection from "../shared/BodySection";
@@ -35,7 +34,10 @@ const ContactForm = () => {
       setEmailError(true);
       return;
     }
-    sendContactForm(formState);
+    fetch("/api/contact", {
+      method: "POST",
+      body: JSON.stringify(formState),
+    });
     setSubmissionSuccess(true);
     setFormState({
       firstName: "",

@@ -6,7 +6,6 @@ import {
   VolunteerFormInterface,
   VolunteerFormRolesInterface,
 } from "@/interfaces/interfaces";
-import { sendVolunteerForm } from "@/services/firebase.services";
 import { validateEmail, validatePhone } from "@/services/util.services";
 import BodySection from "../shared/BodySection";
 
@@ -21,6 +20,8 @@ const NewVolunteerForm = () => {
   const [volunteerRoles, setVolunteerRoles] = React.useState<
     VolunteerFormRolesInterface[]
   >(VOLUNTEER_ROLES.map((role) => ({ role, checked: false })));
+  const [volunteerRoleRequired, setVolunteerRoleRequired] =
+    React.useState(true);
   const [submissionSuccess, setSubmissionSuccess] = React.useState(false);
   const [emailError, setEmailError] = React.useState(false);
   const [phoneError, setPhoneError] = React.useState(false);
@@ -32,11 +33,14 @@ const NewVolunteerForm = () => {
       setPhoneError(!validatePhone(formData.phone));
       return;
     }
-    sendVolunteerForm({
-      ...formData,
-      roles: volunteerRoles
-        .filter((role) => role.checked)
-        .map((role) => role.role),
+    fetch("/api/volunteer", {
+      method: "POST",
+      body: JSON.stringify({
+        ...formData,
+        roles: volunteerRoles
+          .filter((role) => role.checked)
+          .map((role) => role.role),
+      }),
     });
     setSubmissionSuccess(true);
     setFormData({
@@ -71,6 +75,15 @@ const NewVolunteerForm = () => {
 
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value, checked } = e.target;
+    if (checked) {
+      setVolunteerRoleRequired(false);
+    }
+    if (
+      !checked &&
+      volunteerRoles.filter((role) => role.checked).length === 1
+    ) {
+      setVolunteerRoleRequired(true);
+    }
     setVolunteerRoles((prev) =>
       prev.map((role) =>
         role.role === value ? { ...role, checked } : { ...role },
@@ -190,6 +203,7 @@ const NewVolunteerForm = () => {
                 onChange={handleCheckboxChange}
                 type="checkbox"
                 className="mr-1"
+                required={volunteerRoleRequired}
               />
               {role}
             </label>

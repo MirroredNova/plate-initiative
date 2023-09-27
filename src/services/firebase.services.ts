@@ -18,7 +18,7 @@ export const sendContactForm = (formData: ContactFormInterface) => {
   const db = getDatabase(app);
   const emailRef = ref(db, "contact-forms");
   push(emailRef, {
-    formData,
+    ...formData,
     date: new Date().toISOString(),
   });
 };
@@ -27,7 +27,7 @@ export const sendVolunteerForm = (formData: VolunteerFormInterface) => {
   const db = getDatabase(app);
   const emailRef = ref(db, "volunteer-forms");
   push(emailRef, {
-    formData,
+    ...formData,
     date: new Date().toISOString(),
   });
 };

@@ -1,6 +1,5 @@
 "use client";
 
-import { sendNewsletterSignup } from "@/services/firebase.services";
 import { validateEmail } from "@/services/util.services";
 import React, { useRef } from "react";
 
@@ -9,12 +8,13 @@ const FooterSignupForm = () => {
   const [emailError, setEmailError] = React.useState(false);
   const [emailSuccess, setEmailSuccess] = React.useState(false);
 
-  const signupHandler = () => {
-    if (
-      email.current?.value &&
-      validateEmail(email.current?.value.toLowerCase())
-    ) {
-      sendNewsletterSignup(email.current?.value);
+  const signupHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    if (email.current?.value && validateEmail(email.current?.value)) {
+      fetch("/api/newsletter", {
+        method: "POST",
+        body: JSON.stringify({ email: email.current?.value }),
+      });
       email.current.value = "";
       setEmailSuccess(true);
       setTimeout(() => {
