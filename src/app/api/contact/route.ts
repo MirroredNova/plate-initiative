@@ -17,6 +17,6 @@ export async function POST(req: Request) {
   if (!validateEmail(body.email)) {
     return new Response("Invalid email address", { status: 400 });
   }
-  sendContactForm(body);
+  await sendContactForm(body);
   return new Response(null, { status: 200 });
 }

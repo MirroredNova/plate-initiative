@@ -8,10 +8,10 @@ const FooterSignupForm = () => {
   const [emailError, setEmailError] = React.useState(false);
   const [emailSuccess, setEmailSuccess] = React.useState(false);
 
-  const signupHandler = async (e: React.MouseEvent<HTMLButtonElement>) => {
+  const signupHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     if (email.current?.value && validateEmail(email.current?.value)) {
-      await fetch("/api/newsletter", {
+      fetch("/api/newsletter", {
         method: "POST",
         body: JSON.stringify({ email: email.current?.value }),
       });

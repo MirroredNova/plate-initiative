@@ -23,6 +23,6 @@ export async function POST(req: Request) {
   if (!validatePhone(body.phone)) {
     return new Response("Invalid phone number", { status: 400 });
   }
-  sendVolunteerForm(body);
+  await sendVolunteerForm(body);
   return new Response(null, { status: 200 });
 }
