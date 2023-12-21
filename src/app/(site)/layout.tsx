@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Alice, Sofia_Sans } from "next/font/google";
 import Footer from "@/components/layout/Footer";
+import AuthProvider from "@/components/providers/AuthProvider";
 
 const alice = Alice({
   subsets: ["latin"],
@@ -27,11 +28,13 @@ type Props = {
 const RootLayout = ({ children }: Props) => (
   <html lang="en" className={`${alice.variable} ${sofia.variable}`}>
     <body className="bg-primary_light min-w-[325px]">
-      <header>
-        <Nav />
-      </header>
-      <main className="pt-16 lg:pt-0">{children}</main>
-      <Footer />
+      <AuthProvider>
+        <header>
+          <Nav />
+        </header>
+        <main className="pt-16 lg:pt-0">{children}</main>
+        <Footer />
+      </AuthProvider>
     </body>
   </html>
 );
