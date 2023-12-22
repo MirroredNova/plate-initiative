@@ -6,13 +6,11 @@ export interface ContactFormInterface {
   email: string;
   subject: string;
   message: string;
-  user: string;
 }
 
 export interface VolunteerFormRolesInterface {
   role: string;
   checked: boolean;
-  user: string;
 }
 
 export interface VolunteerFormInterface {
@@ -22,7 +20,6 @@ export interface VolunteerFormInterface {
   phone: string;
   experience: string;
   roles?: string[];
-  user: string;
 }
 
 export interface AuthContextType {
